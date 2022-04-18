@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASLM_DataBase", "ASLM_DataBase\ASLM_DataBase.csproj", "{88CE7844-3D42-4278-911C-77E9D189FBE4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_ASLM_Database", "Setup_ASLM_Database\Setup_ASLM_Database.vdproj", "{136B7CE8-0C3B-472D-9B3A-6731B00BA75B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Result|Any CPU = Result|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Result|Any CPU.ActiveCfg = Result|Any CPU
+		{88CE7844-3D42-4278-911C-77E9D189FBE4}.Result|Any CPU.Build.0 = Result|Any CPU
+		{136B7CE8-0C3B-472D-9B3A-6731B00BA75B}.Debug|Any CPU.ActiveCfg = Debug
+		{136B7CE8-0C3B-472D-9B3A-6731B00BA75B}.Release|Any CPU.ActiveCfg = Release
+		{136B7CE8-0C3B-472D-9B3A-6731B00BA75B}.Result|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {653D1D14-1475-486F-973C-AC9A3D50A592}
+	EndGlobalSection
+EndGlobal

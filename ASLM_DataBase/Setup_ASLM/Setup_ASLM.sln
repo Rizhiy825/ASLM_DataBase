@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_ASLM", "Setup_ASLM\Setup_ASLM.vdproj", "{FC95A5A2-D24A-4DF5-93C4-CDB1EE4C1701}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC95A5A2-D24A-4DF5-93C4-CDB1EE4C1701}.Debug|Default.ActiveCfg = Debug
+		{FC95A5A2-D24A-4DF5-93C4-CDB1EE4C1701}.Debug|Default.Build.0 = Debug
+		{FC95A5A2-D24A-4DF5-93C4-CDB1EE4C1701}.Release|Default.ActiveCfg = Release
+		{FC95A5A2-D24A-4DF5-93C4-CDB1EE4C1701}.Release|Default.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20D38B81-F802-477F-95B8-82E1EFEB057C}
+	EndGlobalSection
+EndGlobal
