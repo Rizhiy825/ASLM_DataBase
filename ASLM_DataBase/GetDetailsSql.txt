@@ -1,0 +1,12 @@
+﻿SELECT
+	piece.idcell AS №,
+	thickness.valuethickness AS Толщина,
+	piece.piecelength AS Длина,
+	piece.piecewidth AS Ширина,
+	piece.piececount AS Количество,
+	kindpiece.namekind AS Тип,
+	piece.piecename AS Прим
+FROM piece
+	INNER JOIN thickness ON (piece.idthickness = thickness.idthickness)
+	INNER JOIN kindpiece ON (piece.idkindpiece = kindpiece.idkindpiece)
+ORDER BY piece.idcell

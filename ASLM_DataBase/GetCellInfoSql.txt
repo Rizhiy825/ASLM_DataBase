@@ -1,0 +1,39 @@
+﻿ SELECT t.idcell AS Ячейка,
+    t.fullweight AS Вес,
+        CASE
+            WHEN (t.countendpop = 0) THEN 'Пусто'::text
+            ELSE
+            CASE
+                WHEN (t.countbeginpop = 0) THEN 'Выгрузка...'::text
+                ELSE
+                CASE
+                    WHEN (t.countendpush = 0) THEN 'Занято'::text
+                    ELSE
+                    CASE
+                        WHEN (t.countbeginpush = 0) THEN 'Загрузка...'::text
+                        ELSE 'Пусто'::text
+                    END
+                END
+            END
+        END AS Статус
+        
+   FROM ( SELECT c.idcell,
+            ( SELECT sum(o.measuredweight) AS sum
+                   FROM operation o
+                  WHERE ((o.idcell = c.idcell) AND ((o.dtendpop IS NULL) OR (o.dtendpop < '1970-01-01 23:59:59'::timestamp without time zone)) AND ((NOT (o.dtendpush IS NULL)) OR (o.dtendpush > '1970-01-01 23:59:59'::timestamp without time zone)))) AS fullweight,
+            ( SELECT count(o2.*) AS count
+                   FROM operation o2
+                  WHERE ((o2.idcell = c.idcell) AND ((o2.dtbeginpush IS NULL) OR (o2.dtbeginpush < '1970-01-01 23:59:59'::timestamp without time zone)))) AS countbeginpush,
+            ( SELECT count(o2.*) AS count
+                   FROM operation o2
+                  WHERE ((o2.idcell = c.idcell) AND ((o2.dtendpush IS NULL) OR (o2.dtendpush < '1970-01-01 23:59:59'::timestamp without time zone)))) AS countendpush,
+            ( SELECT count(o2.*) AS count
+                   FROM operation o2
+                  WHERE ((o2.idcell = c.idcell) AND ((o2.dtbeginpop IS NULL) OR (o2.dtbeginpop < '1970-01-01 23:59:59'::timestamp without time zone)))) AS countbeginpop,
+            ( SELECT count(o2.*) AS count
+                   FROM operation o2
+                  WHERE ((o2.idcell = c.idcell) AND ((o2.dtendpop IS NULL) OR (o2.dtendpop < '1970-01-01 23:59:59'::timestamp without time zone)))) AS countendpop
+           FROM cell c
+          WHERE (c.idcell = ANY (ARRAY[1, 3, 5, 7, 9, 11, 13, 15, 17]))) t
+  WHERE (t.idcell = ANY (ARRAY[1, 3, 5, 7, 9, 11, 13, 15, 17]))
+  ORDER BY t.idcell;
